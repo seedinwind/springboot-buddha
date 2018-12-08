@@ -1,0 +1,10 @@
+/.idea/
+/.gradle/
+/build/
+poem.iml
+/out
+/upload-dir
+.idea/*
+.idea
+gradlew
+gradlew.bat
