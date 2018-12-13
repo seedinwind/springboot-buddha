@@ -14,8 +14,8 @@ public class TranslateTaskController {
     @Autowired
     private TranslateRepository repository;
 
-    @PostMapping("/admin/translate/gaoseng/task")
-    public JsonResult<String> saveTranslateTask(@ModelAttribute TranslateTask task) {
+    @PostMapping(value="/admin/translate/gaoseng/task")
+    public JsonResult<String> saveTranslateTask(@RequestBody  TranslateTask task) {
         repository.save(task);
         return new JsonResult<String>(0,"ok");
     }
