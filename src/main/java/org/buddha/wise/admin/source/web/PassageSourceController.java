@@ -17,7 +17,7 @@ public class PassageSourceController {
     @Autowired
     private PassageSourceRepository repository;
 
-    @RequestMapping("/admin/translate/gaoseng")
+    @RequestMapping("admin/translate/gaoseng")
     public JsonResult<List<PassageSource>> getPassageSourceList() {
         return new JsonResult<>(repository.findAll());
     }
