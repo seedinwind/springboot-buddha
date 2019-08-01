@@ -19,6 +19,6 @@ public class PassageSourceController {
 
     @RequestMapping("admin/translate/gaoseng")
     public JsonResult<List<PassageSource>> getPassageSourceList() {
-        return new JsonResult<>(repository.findAll());
+        return new JsonResult<List<PassageSource>>(repository.findAll());
     }
 }

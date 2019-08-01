@@ -69,10 +69,10 @@ public class AuthServiceImpl implements AuthService {
         userToAdd.addRole("ROLE_USER");
         userToAdd.setType(User.UserType.OWN.ordinal());
         try {
-            return new  JsonResult<>(userRepository.save(userToAdd));
+            return new  JsonResult<User>(userRepository.save(userToAdd));
         } catch (DataIntegrityViolationException e) {
             logger.debug(e.getMessage());
-            return new  JsonResult<>(500,e.getRootCause().getMessage());
+            return new  JsonResult<User>(500,e.getRootCause().getMessage());
         }
     }
 
